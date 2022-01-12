@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter,  Route, Routes, } from 'react-router-dom'
+import {BrowserRouter,  Link,  Route, Routes, } from 'react-router-dom'
 import Feedbacklist from "./components/Feedbacklist";
 import { FeedbackProvider } from "./context/FeedbackContext";
 
@@ -24,7 +24,7 @@ function App() {
   return (
     <FeedbackProvider>
       <BrowserRouter>
-       {window.location.pathname === '/' ? <Header /> : null}
+       { <Link to='/'></Link> ? <Header /> : null}
       <div className="container">
         <Routes>
           <Route exact path='/' element = {

@@ -18,6 +18,7 @@ export const FeedbackProvider = ({children}) => {
       
 
     function Deletefeedbackitem(id){
+        if(window.confirm('Are You sure want to Delete the item?'))
         setFeedback(feedback.filter((item) => item.id !== id))
    }
 
